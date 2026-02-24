@@ -33,6 +33,10 @@ app.post('/submit-order', (req, res) => {
     console.log(order);
 });
 
+app.get('/admin', (req, res) => {
+    res.render('admin', { orders });
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running at 
         http://localhost:${PORT}`);

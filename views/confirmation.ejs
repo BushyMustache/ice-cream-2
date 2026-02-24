@@ -17,10 +17,11 @@
     <%= Array.isArray(order.toppings) ?
         order.toppings.join(', ') :
         "No toppings" %>
-  </p>
-  <h2>Additional Comments</h2>
-  <p>Comments: <%= order.comments %></p>
-  <p>Date/Time: <%= order.timestamp.toLocaleString()%></p>
+    </p>
+    <h2>Additional Comments</h2>
+    <p>Comments: <%= order.comments %></p>
+    <p>Date/Time: <%= order.timestamp.toLocaleString()%></p>
     <a href="/">Place Another Order</a>
+    <a href="/admin">Admin Page</a>
 </body>
 </html>
