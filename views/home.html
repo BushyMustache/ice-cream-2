@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "StyleSheet" href = "styles/styles.css">
+    <link rel = "icon" href = "images/ice-cream-cone.jpg">
+    <script src = "js/ice-cream.js" defer></script>
+    <title>Ice Cream Order Form</title>
+</head>
+
+<body>
+    <form id = "ice-cream-form" action = "#" method = "get">
+    <h1>Ice Cream Order Form</h1>
+
+    <fieldset>
+        <legend>Personal information</legend>
+        <label for = "name">Name:
+            <span class = "err" id = "err-name">
+                Name is required.
+            </span>
+        </label>
+        <input type = "text" name = "name" id = "name">
+        <label for = "email">Email:
+            <span class = "err" id = "err-email">
+                Email address is required.
+            </span>
+        </label>
+        <input type = "email" name = "email" id = "email">
+    </fieldset>
+
+    <fieldset>
+        <legend>Order Details</legend>
+        <label for = "flavor">Choose your flavor:
+            <span class = "err" id = "err-flavor">
+                Please select an ice cream flavor.
+            </span>
+        </label>
+        <select id = "flavor" name = "flavor">
+            <option value = "none">--- Select a flavor ---</option>
+            <option value = "vanilla">Vanilla</option>
+            <option value = "chocolate">Chocolate</option>
+            <option value = "strawberry">Strawberry</option>
+            <option value = "spumoni">Spumoni</option>
+        </select>
+        
+        <p class = "cone">Choose your cone:</p>
+        <span class = "err" id = "err-cone">
+            Please select a cone.
+        </span>
+        <label for = "waffle" class = "option">
+            <input type = "radio" id = "waffle" value = "waffle" name = "cone">Waffle Cone
+        </label>
+        <label for = "sugar" class = "option">
+            <input type = "radio" id = "sugar" value = "sugar" name = "cone">Sugar Cone
+        </label>
+        <label for = "cup" class = "option">
+            <input type = "radio" id = "cup" value = "cup" name = "cone">Cup
+        </label>
+
+        <p class = "toppings">Choose your toppings:</p>
+        <label for = "sprinkles" class = "option">
+            <input type = "checkbox" name = "toppings[]" id = "sprinkles" value = "sprinkles">Sprinkles
+        </label>
+        <label for = "nuts" class = "option">
+            <input type = "checkbox" name = "toppings[]" id = "nuts" value = "nuts">Nuts
+        </label>
+        <label for = "cherry" class = "option">
+            <input type = "checkbox" name = "toppings[]" id = "cherry" value = "cherry">Cherry
+        </label>
+        <label for = "whipped-cream" class = "option">
+            <input type = "checkbox" name = "toppings[]" id = "whipped-cream" value = "whipped-cream">Whipped Cream
+        </label>
+
+        <label for = "comments">Additional comments:</label>
+        <textarea id = "comments" name = "comments" rows = "5"></textarea>
+    </fieldset>
+
+    <button type = "submit" id = "order-button">Submit Order</button>
+
+    </form>
+
+</body>
+</html>
