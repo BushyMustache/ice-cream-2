@@ -7,6 +7,20 @@
 </head>
 <body>
     <h1>Thank you for your order!</h1>
+    <h2>Personal Information</h2>
+    <p>Name: <%= order.name %> </p>
+    <p>Email:  <%= order.email %></p>
+    <h2>Order Details</h2>
+    <p>Flavor <%= order.flavor %></p>
+    <p>Cone Type: <%= order.cone %></p>
+    <p>Toppings: 
+    <%= Array.isArray(order.toppings) ?
+        order.toppings.join(', ') :
+        "No toppings" %>
+  </p>
+  <h2>Additional Comments</h2>
+  <p>Comments: <%= order.comments %></p>
+  <p>Date/Time: <%= order.timestamp.toLocaleString()%></p>
     <a href="/">Place Another Order</a>
 </body>
 </html>
